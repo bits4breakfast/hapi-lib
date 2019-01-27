@@ -19,7 +19,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "bits4breakfast/hapi-lib": "*@dev"
+    "bits4breakfast/hapi-lib": "~1.0"
   }
 }
 ```
