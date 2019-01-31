@@ -1,6 +1,6 @@
 <?php
 /**
- * ProfileType
+ * Status
  *
  * PHP version 5
  *
@@ -30,24 +30,27 @@ namespace Hapi\Model;
 use \Hapi\ObjectSerializer;
 
 /**
- * ProfileType Class Doc Comment
+ * Status Class Doc Comment
  *
  * @category Class
- * @description type of profile
+ * @description current status of reservation
  * @package  Hapi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProfileType
+class Status
 {
     /**
      * Possible values of this enum
      */
-    const PERSON = 'PERSON';
-const COMPANY = 'COMPANY';
-const TRAVEL_AGENT = 'TRAVEL_AGENT';
-const GROUP_PROFILE = 'GROUP_PROFILE';
-const OTHER = 'OTHER';
+    const REQUESTED = 'REQUESTED';
+const RESERVED = 'RESERVED';
+const IN_HOUSE = 'IN_HOUSE';
+const CANCELLED = 'CANCELLED';
+const CHECKED_OUT = 'CHECKED_OUT';
+const NO_SHOW = 'NO_SHOW';
+const WAIT_LIST = 'WAIT_LIST';
+const UNKNOWN = 'UNKNOWN';
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -55,10 +58,13 @@ const OTHER = 'OTHER';
     public static function getAllowableEnumValues()
     {
         return [
-            self::PERSON,
-self::COMPANY,
-self::TRAVEL_AGENT,
-self::GROUP_PROFILE,
-self::OTHER,        ];
+            self::REQUESTED,
+self::RESERVED,
+self::IN_HOUSE,
+self::CANCELLED,
+self::CHECKED_OUT,
+self::NO_SHOW,
+self::WAIT_LIST,
+self::UNKNOWN,        ];
     }
 }

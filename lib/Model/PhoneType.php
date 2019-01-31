@@ -1,6 +1,6 @@
 <?php
 /**
- * ProfileType
+ * PhoneType
  *
  * PHP version 5
  *
@@ -30,23 +30,22 @@ namespace Hapi\Model;
 use \Hapi\ObjectSerializer;
 
 /**
- * ProfileType Class Doc Comment
+ * PhoneType Class Doc Comment
  *
  * @category Class
- * @description type of profile
  * @package  Hapi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProfileType
+class PhoneType
 {
     /**
      * Possible values of this enum
      */
-    const PERSON = 'PERSON';
-const COMPANY = 'COMPANY';
-const TRAVEL_AGENT = 'TRAVEL_AGENT';
-const GROUP_PROFILE = 'GROUP_PROFILE';
+    const HOME = 'HOME';
+const BUSINESS = 'BUSINESS';
+const MOBILE = 'MOBILE';
+const FAX = 'FAX';
 const OTHER = 'OTHER';
     /**
      * Gets allowable values of the enum
@@ -55,10 +54,10 @@ const OTHER = 'OTHER';
     public static function getAllowableEnumValues()
     {
         return [
-            self::PERSON,
-self::COMPANY,
-self::TRAVEL_AGENT,
-self::GROUP_PROFILE,
+            self::HOME,
+self::BUSINESS,
+self::MOBILE,
+self::FAX,
 self::OTHER,        ];
     }
 }

@@ -1,0 +1,773 @@
+swagger: '2.0'
+info:
+    version: "v2"
+    title: HAPI Data Model
+    description: HAPI External Data Model
+paths: [ ]
+definitions:
+    PropertyId:
+        title: PropertyId
+        type: object
+        description: >-
+            Property id in HAPI system
+        properties:
+            chainCode:
+                type: string
+                example: HIL
+            brandCode:
+                type: string
+                example: ABVI
+            propertyCode:
+                type: string
+                example: FSDH
+    TimeSpan:
+        title: TimeSpan
+        type: object
+        description: Duration of event
+        properties:
+            start:
+                type: string
+                description: begin date of span, in YYYY-MM-DD format
+                example: '2018-12-01'
+            end:
+                type: string
+                description: end date of span, in YYYY-MM-DD format
+                example: '2018-12-03'
+    Reservation:
+        title: Reservation
+        type: object
+        properties:
+            propertyId:
+                $ref: '#/definitions/PropertyId'
+            id:
+                type: string
+                description: reservation identifier and object key
+                example: 542154
+            bookingConfirmationId:
+                type: string
+                description: unique confirmation id within given hotel
+                example: L7RR1A
+            arrivalDate:
+                type: string
+                description: 'check-in date, in YYYY-MM-DD format'
+                example: '2018-08-23'
+            arrivalTime:
+                type: string
+                description: estimated check-in time
+                example: 5:00PM
+            departureDate:
+                type: string
+                description: 'check-out date, in YYYY-MM-DD format'
+                example: '2018-08-25'
+            creator:
+                type: string
+                description: user or interface who created the reservation
+                example: GARCIA
+            createdDate:
+                type: string
+                description: read-only reservation create date in hotel, in YYYY-MM-DDThh:mm:ss.sss format
+                example: '2018-06-01T15:34:54.000'
+            cancelledDate:
+                type: string
+                description: >-
+                    Reservation cancellation date in hotel, in YYYY-MM-DDThh:mm:ss.sss
+                    format
+                example: '2018-06-01T15:34:54.000'
+            cancellationNumber:
+                type: string
+                description: >-
+                    cancellation number for reservation. may be supplied externally or
+                    returned from pms
+                example: CXL12345
+            adults:
+                type: integer
+                example: 2
+            children:
+                type: integer
+                example: 1
+            status:
+                type: string
+                description: current status of reservation
+                example: RESERVED
+            guests:
+                type: array
+                description: guest profiles associated to reservation
+                items:
+                    $ref: '#/definitions/Guest'
+            profiles:
+                type: array
+                description: non-guest profiles associated to reservation
+                items:
+                    $ref: '#/definitions/Profile'
+            roomStays:
+                type: array
+                description: room stay information associated to reservation
+                items:
+                    $ref: '#/definitions/RoomStay'
+            comments:
+                type: array
+                example: Guest will be arriving by spaceship
+                items:
+                    $ref: '#/definitions/Comment'
+    Stay:
+        title: Stay
+        type: object
+        properties:
+            propertyId:
+                $ref: '#/definitions/PropertyId'
+            reservationId:
+                type: string
+                description: id of reservation associated with stay
+                example: 542154
+            roomStay:
+                $ref: '#/definitions/RoomStay'
+    RoomStay:
+        title: RoomStay
+        type: object
+        properties:
+            roomNumber:
+                type: string
+                description: room number for stay
+                example: '122'
+            status:
+                type: string
+            guestId:
+                type: string
+                description: id of guest associated to stay
+                example: '5658451'
+            roomType:
+                type: string
+                description: code identifying the type of room associated to stay
+                example: KING
+            rateCode:
+                type: string
+                description: code identifying rate for stay
+                example: AAA
+            marketCode:
+                type: string
+                description: code identifying marketing type for rate
+                example: F
+            channelCode:
+                type: string
+                description: code identifying source of reservation
+                example: DM
+            sourceCode:
+                type: string
+                description: code identifying source of rate associated to stay
+                example: SRC
+            blockCode:
+                type: string
+                description: group block code
+                example: GROUPBLOCK
+            roomCount:
+                type: integer
+                description: number of rooms associated to stay
+                example: 1
+            paymentMethod:
+                type: string
+                description: payment method used in the reservation
+                example: CA
+            compYN:
+                type: string
+                description: is reservation complimentary
+                example: false
+            rates:
+                type: array
+                items:
+                    $ref: '#/definitions/RoomRate'
+            revenue:
+                type: array
+                items:
+                    $ref: '#/definitions/Revenue'
+            services:
+                type: array
+                items:
+                    $ref: '#/definitions/Service'
+    Status:
+        title: Status
+        type: string
+        description: current status of reservation
+        enum:
+        - "REQUESTED"
+        - "RESERVED"
+        - "IN_HOUSE"
+        - "CANCELLED"
+        - "CHECKED_OUT"
+        - "NO_SHOW"
+        - "WAIT_LIST"
+        - "UNKNOWN"
+    ProfileType:
+        title: ProfileType
+        type: string
+        description: type of profile
+        enum:
+        - "PERSON"
+        - "COMPANY"
+        - "TRAVEL_AGENT"
+        - "GROUP_PROFILE"
+        - "OTHER"
+    Guest:
+        title: Guest
+        type: object
+        description: profile info for guest(s)
+        properties:
+            profile:
+                $ref: '#/definitions/Profile'
+            IsPrimary:
+                type: boolean
+                description: designates if primary guest on reservation
+                example: true
+    Profile:
+        title: Profile
+        type: object
+        properties:
+            propertyId:
+                $ref: '#/definitions/PropertyId'
+            id:
+                type: string
+                description: reservation identifier
+                example: 542154
+            type:
+                type: string
+                example: PERSON
+            name:
+                $ref: '#/definitions/Name'
+            company:
+                type: string
+                description: used to provide company name when name field is used for contact info
+                example: HAPI
+            dateOfBirth:
+                type: string
+                example: '1979-10-31'
+            emails:
+                type: array
+                items:
+                    $ref: '#/definitions/Email'
+            phones:
+                type: array
+                items:
+                    $ref: '#/definitions/Phone'
+            addresses:
+                type: array
+                items:
+                    $ref: '#/definitions/Address'
+            idDocuments:
+                type: array
+                items:
+                    $ref: '#/definitions/IdDocument'
+            loyaltyPrograms:
+                type: array
+                items:
+                    $ref: '#/definitions/LoyaltyProgram'
+            creator:
+                type: string
+                description: user or interface who created the profile
+                example: AFESSE
+            createdDate:
+                type: string
+                description: read-only date and time the profile was created
+                example: '2018-05-14T20:02:40.000'
+            travelAgentId:
+                type: string
+                description: IATA number
+                example: ABC1234
+    Address:
+        title: Address
+        type: object
+        properties:
+            type:
+                type: string
+                description: address type
+                example: BUSINESS
+            primary:
+                type: boolean
+                description: primary address flag
+                example: true
+            address1:
+                type: string
+                description: first line of address. typically contains street info
+                example: '1234 Park Ave'
+            address2:
+                type: string
+                description: second line of address. typically contains apartment info
+                example: 'APT 505'
+            address3:
+                type: string
+                description: third line of address
+            city:
+                type: string
+                description: city associated to address
+                example: Miami
+            stateProvince:
+                $ref: '#/definitions/StateProvince'
+            postalCode:
+                type: string
+                description: postal or zip code associated to address
+                example: '33133'
+            country:
+                $ref: '#/definitions/Country'
+    StateProvince:
+        title: StateProvince
+        type: object
+        properties:
+            code:
+                type: string
+                description: code identifying state or province associated to address
+                example: FL
+            name:
+                type: string
+                description: name of state or province associated to address
+                example: Florida
+    Country:
+        title: Country
+        type: object
+        properties:
+            code:
+                type: string
+                example: US
+            name:
+                type: string
+                example: United States
+    LoyaltyProgram:
+        title: LoyaltyProgram
+        description: rewards program
+        type: object
+        properties:
+            type:
+                type: string
+                description: loyalty program type
+                example: Hotel Rewards
+            membershipId:
+                type: string
+                description: account number
+                example: HR6585421
+    Phone:
+        title: Phone
+        type: object
+        properties:
+            type:
+                type: string
+                example: MOBILE
+            number:
+                type: string
+                example: '555-555-1212'
+    PhoneType:
+        title: PhoneType
+        type: string
+        enum:
+        - "HOME"
+        - "BUSINESS"
+        - "MOBILE"
+        - "FAX"
+        - "OTHER"
+    Email:
+        title: Email
+        type: object
+        properties:
+            type:
+                type: string
+                example: PRIVATE
+            address:
+                type: string
+                example: cguest@email.com
+    EmailType:
+        title: EmailType
+        type: string
+        enum:
+        - "PRIVATE"
+        - "CORPORATE"
+        - "OTHER"
+    Name:
+        title: Name
+        type: object
+        description: name of profile holder
+        properties:
+            salutation:
+                type: string
+                description: salutation for guest
+                example: Mr.
+            first:
+                type: string
+                description: first name
+                example: Christopher
+            middle:
+                type: string
+                description: middle name or initial
+                example: M
+            last:
+                type: string
+                description: last name
+                example: Guest
+    IdDocument:
+        title: IdDocument
+        type: object
+        description: identifying document for profile holder
+        properties:
+            type:
+                type: string
+                example: PASSPORT
+            number:
+                type: string
+                example: '12345'
+    RateHeader:
+        title: RateHeader
+        type: object
+        properties:
+            propertyId:
+                $ref: '#/definitions/PropertyId'
+            id:
+                type: string
+                description: header rate code
+                example: BAR
+            sellDates:
+                $ref: '#/definitions/TimeSpan'
+            category:
+                type: string
+                description: rate category
+                example: STD
+            marketCode:
+                type: string
+                description: rate marketing code
+                example: DM
+            sourceCode:
+                type: string
+                description: rate source code
+                example: SRC
+            status:
+                type: string
+                description: active status of rate
+                example: ACTIVE
+            yieldStatus:
+                type: string
+                description: is rate yieldable
+                example: FULLY
+            details:
+                type: array
+                items:
+                    $ref: '#/definitions/RateDetail'
+    RateDetail:
+        title: RateDetail
+        type: object
+        properties:
+            dates:
+                $ref: '#/definitions/TimeSpan'
+            rateCode:
+                type: string
+                description: detail rate code
+                example: RACK
+            marketCode:
+                type: string
+                description: rate marketing code
+                example: DM
+            sourceCode:
+                type: string
+                description: rate source code
+                example: SRC
+            packages:
+                type: string
+                description: packages included in rate
+                example: ACTIVE
+            roomTypes:
+                type: array
+                description: valid room types for rate
+                example: K1,Q1
+                items:
+                    type: string
+            daysOfWeek:
+                type: array
+                description: Days of the week for which the rate is valid
+                example: 'FRIDAY,SATURDAY,SUNDAY'
+                items:
+                    type: string
+            rates:
+                type: array
+                description: Rate amounts by number of guests and guest type
+                items:
+                    $ref: '#/definitions/Rate'
+    Rate:
+        title: Rate
+        type: object
+        properties:
+            guests:
+                type: integer
+                description: rate occupancy
+                example: 1
+            guestType:
+                type: string
+                description: rate occupancy type
+                example: Adult
+            amount:
+                type: number
+                description: amount of rate
+                example: '59.50'
+    RateRestriction:
+        title: RateRestriction
+        type: object
+        properties:
+            propertyId:
+                $ref: '#/definitions/PropertyId'
+            dates:
+                $ref: '#/definitions/TimeSpan'
+            code:
+                type: string
+                description: current restriction code
+                example: S_OPEN
+            rateCriteria:
+                type: string
+                description: rate restriction type
+                example: RATECODE
+            roomCriteria:
+                type: string
+                description: room restriction type
+                example: ROOMTYPE
+            rateCode:
+                type: string
+                description: restriction rate code
+                example: RACK
+            roomType:
+                type: string
+                description: restriction room type
+                example: KNS
+            daysOfWeek:
+                type: array
+                description: days of week that apply to restriction
+                minItems: 0
+                items:
+                    type: string
+            numberOfDays:
+                type: integer
+                description: min or max number of days required by restriction
+                example: '5'
+    RoomRate:
+        title: RoomRate
+        type: object
+        properties:
+            effectiveDates:
+                $ref: '#/definitions/TimeSpan'
+            rateCode:
+                type: string
+                description: code identifying the rate
+                example: AAA
+            currencyCode:
+                type: string
+                description: currency code of revenue amount indicated
+                example: USD
+            amount:
+                type: number
+                example: 105.55
+                description: rate amount
+    Revenue:
+        title: Revenue
+        type: object
+        description: details related to revenue
+        properties:
+            type:
+                type: string
+                description: classification of revenue indicated
+                example: Room
+            currencyCode:
+                type: string
+                description: currency code of revenue amount indicated
+                example: USD
+            amount:
+                type: number
+                example: 105.55
+                description: rate amount
+            date:
+                type: string
+                description: transaction date
+                example: '2018-08-23'
+    Service:
+        title: Service
+        type: object
+        description: service info related to reservation
+        properties:
+            id:
+                type: string
+                description: code that identifies service
+            rate:
+                $ref: '#/definitions/RoomRate'
+            dates:
+                $ref: '#/definitions/TimeSpan'
+    Inventories:
+        title: Inventories
+        type: object
+        description: availability info for hotel
+        properties:
+            propertyId:
+                $ref: '#/definitions/PropertyId'
+            inventory:
+                type: array
+                items:
+                    $ref: '#/definitions/Inventory'
+    Inventory:
+        title: Inventory
+        type: object
+        description: availability by type
+        properties:
+            inventoryInfo:
+                $ref: '#/definitions/InventoryInfo'
+            inventoryCounts:
+                type: array
+                description: count by type
+                items:
+                    $ref: '#/definitions/InventoryCount'
+    InventoryInfo:
+        title: InventoryInfo
+        type: object
+        description: inventory type and date
+        properties:
+            type:
+                type: string
+                description: inventory type
+                example: DLK
+            dates:
+                $ref: '#/definitions/TimeSpan'
+    InventoryCount:
+        title: InventoryCount
+        type: object
+        properties:
+            type:
+                type: string
+                description: count type
+                example: roomCount
+            count:
+                type: string
+                description: count value
+                example: 125
+    Allotment:
+        title: Allotment
+        type: object
+        description: group block of inventory
+        properties:
+            propertyId:
+                $ref: '#/definitions/PropertyId'
+            id:
+                type: string
+                description: Block code and object id
+                example: HOLIDAY2018
+            status:
+                type: string
+                description: Block status
+                example: ACTIVE
+            blockName:
+                type: string
+                description: Block name
+                example: CONFERENCE HOLIDAY 2018
+            dates:
+                $ref: '#/definitions/TimeSpan'
+            marketCode:
+                type: string
+                description: code identifying marketing type for rate
+                example: F
+            sourceCode:
+                type: string
+                description: code identifying source of rate associated to block
+                example: SRC
+            channelCode:
+                type: string
+                description: code identifying booking channel for block
+                example: SRC
+            bookingMethod:
+                type: string
+                description: code identifying booking method for block
+                example: IWEB
+            billingType:
+                type: string
+                description: used to indicate if charges should be billed to master account
+            includesFoodAndBev:
+                type: boolean
+                description: used to indicate whether food and drinks should be charged to master account
+                example: true
+            blockType:
+                type: string
+                description: type of block
+                example: ELASTIC
+            comments:
+                type: array
+                description: free text comments associated to block
+                items:
+                    $ref: '#/definitions/Comment'
+            profiles:
+                type: array
+                items:
+                    $ref: '#/definitions/Profile'
+            inventoryBlocks:
+                type: array
+                items:
+                    $ref: '#/definitions/InventoryBlock'
+    InventoryBlock:
+        title: InventoryBlock
+        description: inventory block detail for allotment
+        type: object
+        properties:
+            roomType:
+                type: string
+                description: Room type
+                example: KING
+            rateCode:
+                type: string
+                description: code identifying rate for block
+                example: AAA
+            dates:
+                $ref: '#/definitions/TimeSpan'
+            cutoffDate:
+                type: string
+                description: >-
+                    used to determine when the inventory block is released back into house inventory
+                example: '2018-12-01'
+            numberToBlock:
+                type: integer
+                description: number of rooms for this block per day per room type
+                example: 2
+            numberSold:
+                type: integer
+                description: number of rooms sold in block
+                example: 5
+            compRoomsNumber:
+                type: integer
+                description: number of comp rooms available in block
+                example: 0
+            pickUpStatus:
+                type: string
+                description: inventory count type
+                example: PHYSICAL
+            currencyCode:
+                type: string
+                example: USD
+                description: code identifying type of currency associated to rate
+            rates:
+                type: array
+                description: rate and occupancy detail for room type in block
+                items:
+                    $ref: '#/definitions/BlockRate'
+
+    BlockRate:
+        type: object
+        properties:
+            guests:
+                type: integer
+                description: number of guests
+            occupancyProjected:
+                type: integer
+                description: projected occupancy for number of guests indicated
+                example: 0
+            amount:
+                type: number
+                example: 105.5
+                description: rate amount
+            includesTax:
+                type: boolean
+                example: true
+                description: is indicated rate inclusive of tax
+    Comment:
+        type: object
+        properties:
+            type:
+                type: string
+                description: type or source of comment
+                example: COMMISSION
+            comment:
+                type: string
+                description: comment text
+                example: 0
