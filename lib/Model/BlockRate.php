@@ -58,7 +58,7 @@ class BlockRate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'guests' => 'int',
 'occupancy_projected' => 'int',
-'amount' => 'BigDecimal',
+'amount' => 'float',
 'includes_tax' => 'bool'    ];
 
     /**
@@ -266,7 +266,7 @@ class BlockRate implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getAmount()
     {
@@ -276,7 +276,7 @@ class BlockRate implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param BigDecimal $amount rate amount
+     * @param float $amount rate amount
      *
      * @return $this
      */

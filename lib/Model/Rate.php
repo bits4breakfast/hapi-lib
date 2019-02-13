@@ -58,7 +58,7 @@ class Rate implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'guests' => 'int',
 'guest_type' => 'string',
-'amount' => 'BigDecimal'    ];
+'amount' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -260,7 +260,7 @@ class Rate implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getAmount()
     {
@@ -270,7 +270,7 @@ class Rate implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param BigDecimal $amount amount of rate
+     * @param float $amount amount of rate
      *
      * @return $this
      */

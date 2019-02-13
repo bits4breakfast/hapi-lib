@@ -59,7 +59,7 @@ class RoomRate implements ModelInterface, ArrayAccess
         'effective_dates' => '\Hapi\Model\TimeSpan',
 'rate_code' => 'string',
 'currency_code' => 'string',
-'amount' => 'BigDecimal'    ];
+'amount' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -290,7 +290,7 @@ class RoomRate implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getAmount()
     {
@@ -300,7 +300,7 @@ class RoomRate implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param BigDecimal $amount rate amount
+     * @param float $amount rate amount
      *
      * @return $this
      */

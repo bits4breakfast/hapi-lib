@@ -59,7 +59,7 @@ class Revenue implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'type' => 'string',
 'currency_code' => 'string',
-'amount' => 'BigDecimal',
+'amount' => 'float',
 'date' => 'string'    ];
 
     /**
@@ -267,7 +267,7 @@ class Revenue implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return BigDecimal
+     * @return float
      */
     public function getAmount()
     {
@@ -277,7 +277,7 @@ class Revenue implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param BigDecimal $amount rate amount
+     * @param float $amount rate amount
      *
      * @return $this
      */
