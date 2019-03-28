@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * InventoryInfo Class Doc Comment
  *
  * @category Class
  * @description inventory type and date
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InventoryInfo implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'type' => 'string',
-'dates' => '\Hapi\Model\TimeSpan'    ];
+'dates' => '\HapiPush\Model\TimeSpan'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -231,7 +231,7 @@ class InventoryInfo implements ModelInterface, ArrayAccess
     /**
      * Gets dates
      *
-     * @return \Hapi\Model\TimeSpan
+     * @return \HapiPush\Model\TimeSpan
      */
     public function getDates()
     {
@@ -241,7 +241,7 @@ class InventoryInfo implements ModelInterface, ArrayAccess
     /**
      * Sets dates
      *
-     * @param \Hapi\Model\TimeSpan $dates dates
+     * @param \HapiPush\Model\TimeSpan $dates dates
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Service Class Doc Comment
  *
  * @category Class
  * @description service info related to reservation
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class Service implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-'rate' => '\Hapi\Model\RoomRate',
-'dates' => '\Hapi\Model\TimeSpan'    ];
+'rate' => '\HapiPush\Model\RoomRate',
+'dates' => '\HapiPush\Model\TimeSpan'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -237,7 +237,7 @@ class Service implements ModelInterface, ArrayAccess
     /**
      * Gets rate
      *
-     * @return \Hapi\Model\RoomRate
+     * @return \HapiPush\Model\RoomRate
      */
     public function getRate()
     {
@@ -247,7 +247,7 @@ class Service implements ModelInterface, ArrayAccess
     /**
      * Sets rate
      *
-     * @param \Hapi\Model\RoomRate $rate rate
+     * @param \HapiPush\Model\RoomRate $rate rate
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class Service implements ModelInterface, ArrayAccess
     /**
      * Gets dates
      *
-     * @return \Hapi\Model\TimeSpan
+     * @return \HapiPush\Model\TimeSpan
      */
     public function getDates()
     {
@@ -271,7 +271,7 @@ class Service implements ModelInterface, ArrayAccess
     /**
      * Sets dates
      *
-     * @param \Hapi\Model\TimeSpan $dates dates
+     * @param \HapiPush\Model\TimeSpan $dates dates
      *
      * @return $this
      */

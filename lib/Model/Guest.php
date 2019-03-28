@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Guest Class Doc Comment
  *
  * @category Class
  * @description profile info for guest(s)
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Guest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'profile' => '\Hapi\Model\Profile',
+        'profile' => '\HapiPush\Model\Profile',
 'is_primary' => 'bool'    ];
 
     /**
@@ -207,7 +207,7 @@ class Guest implements ModelInterface, ArrayAccess
     /**
      * Gets profile
      *
-     * @return \Hapi\Model\Profile
+     * @return \HapiPush\Model\Profile
      */
     public function getProfile()
     {
@@ -217,7 +217,7 @@ class Guest implements ModelInterface, ArrayAccess
     /**
      * Sets profile
      *
-     * @param \Hapi\Model\Profile $profile profile
+     * @param \HapiPush\Model\Profile $profile profile
      *
      * @return $this
      */

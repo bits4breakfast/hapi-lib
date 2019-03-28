@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * InventoryBlock Class Doc Comment
  *
  * @category Class
  * @description inventory block detail for allotment
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,14 +59,14 @@ class InventoryBlock implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'room_type' => 'string',
 'rate_code' => 'string',
-'dates' => '\Hapi\Model\TimeSpan',
+'dates' => '\HapiPush\Model\TimeSpan',
 'cutoff_date' => 'string',
 'number_to_block' => 'int',
 'number_sold' => 'int',
 'comp_rooms_number' => 'int',
 'pick_up_status' => 'string',
 'currency_code' => 'string',
-'rates' => '\Hapi\Model\BlockRate[]'    ];
+'rates' => '\HapiPush\Model\BlockRate[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -303,7 +303,7 @@ class InventoryBlock implements ModelInterface, ArrayAccess
     /**
      * Gets dates
      *
-     * @return \Hapi\Model\TimeSpan
+     * @return \HapiPush\Model\TimeSpan
      */
     public function getDates()
     {
@@ -313,7 +313,7 @@ class InventoryBlock implements ModelInterface, ArrayAccess
     /**
      * Sets dates
      *
-     * @param \Hapi\Model\TimeSpan $dates dates
+     * @param \HapiPush\Model\TimeSpan $dates dates
      *
      * @return $this
      */
@@ -471,7 +471,7 @@ class InventoryBlock implements ModelInterface, ArrayAccess
     /**
      * Gets rates
      *
-     * @return \Hapi\Model\BlockRate[]
+     * @return \HapiPush\Model\BlockRate[]
      */
     public function getRates()
     {
@@ -481,7 +481,7 @@ class InventoryBlock implements ModelInterface, ArrayAccess
     /**
      * Sets rates
      *
-     * @param \Hapi\Model\BlockRate[] $rates rate and occupancy detail for room type in block
+     * @param \HapiPush\Model\BlockRate[] $rates rate and occupancy detail for room type in block
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * RoomStay Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -68,9 +68,9 @@ class RoomStay implements ModelInterface, ArrayAccess
 'room_count' => 'int',
 'payment_method' => 'string',
 'comp_yn' => 'string',
-'rates' => '\Hapi\Model\RoomRate[]',
-'revenue' => '\Hapi\Model\Revenue[]',
-'services' => '\Hapi\Model\Service[]'    ];
+'rates' => '\HapiPush\Model\RoomRate[]',
+'revenue' => '\HapiPush\Model\Revenue[]',
+'services' => '\HapiPush\Model\Service[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -572,7 +572,7 @@ class RoomStay implements ModelInterface, ArrayAccess
     /**
      * Gets rates
      *
-     * @return \Hapi\Model\RoomRate[]
+     * @return \HapiPush\Model\RoomRate[]
      */
     public function getRates()
     {
@@ -582,7 +582,7 @@ class RoomStay implements ModelInterface, ArrayAccess
     /**
      * Sets rates
      *
-     * @param \Hapi\Model\RoomRate[] $rates rates
+     * @param \HapiPush\Model\RoomRate[] $rates rates
      *
      * @return $this
      */
@@ -596,7 +596,7 @@ class RoomStay implements ModelInterface, ArrayAccess
     /**
      * Gets revenue
      *
-     * @return \Hapi\Model\Revenue[]
+     * @return \HapiPush\Model\Revenue[]
      */
     public function getRevenue()
     {
@@ -606,7 +606,7 @@ class RoomStay implements ModelInterface, ArrayAccess
     /**
      * Sets revenue
      *
-     * @param \Hapi\Model\Revenue[] $revenue revenue
+     * @param \HapiPush\Model\Revenue[] $revenue revenue
      *
      * @return $this
      */
@@ -620,7 +620,7 @@ class RoomStay implements ModelInterface, ArrayAccess
     /**
      * Gets services
      *
-     * @return \Hapi\Model\Service[]
+     * @return \HapiPush\Model\Service[]
      */
     public function getServices()
     {
@@ -630,7 +630,7 @@ class RoomStay implements ModelInterface, ArrayAccess
     /**
      * Sets services
      *
-     * @param \Hapi\Model\Service[] $services services
+     * @param \HapiPush\Model\Service[] $services services
      *
      * @return $this
      */

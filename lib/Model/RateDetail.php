@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * RateDetail Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,14 +56,14 @@ class RateDetail implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dates' => '\Hapi\Model\TimeSpan',
+        'dates' => '\HapiPush\Model\TimeSpan',
 'rate_code' => 'string',
 'market_code' => 'string',
 'source_code' => 'string',
 'packages' => 'string',
 'room_types' => 'string[]',
 'days_of_week' => 'string[]',
-'rates' => '\Hapi\Model\Rate[]'    ];
+'rates' => '\HapiPush\Model\Rate[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -242,7 +242,7 @@ class RateDetail implements ModelInterface, ArrayAccess
     /**
      * Gets dates
      *
-     * @return \Hapi\Model\TimeSpan
+     * @return \HapiPush\Model\TimeSpan
      */
     public function getDates()
     {
@@ -252,7 +252,7 @@ class RateDetail implements ModelInterface, ArrayAccess
     /**
      * Sets dates
      *
-     * @param \Hapi\Model\TimeSpan $dates dates
+     * @param \HapiPush\Model\TimeSpan $dates dates
      *
      * @return $this
      */
@@ -410,7 +410,7 @@ class RateDetail implements ModelInterface, ArrayAccess
     /**
      * Gets rates
      *
-     * @return \Hapi\Model\Rate[]
+     * @return \HapiPush\Model\Rate[]
      */
     public function getRates()
     {
@@ -420,7 +420,7 @@ class RateDetail implements ModelInterface, ArrayAccess
     /**
      * Sets rates
      *
-     * @param \Hapi\Model\Rate[] $rates Rate amounts by number of guests and guest type
+     * @param \HapiPush\Model\Rate[] $rates Rate amounts by number of guests and guest type
      *
      * @return $this
      */

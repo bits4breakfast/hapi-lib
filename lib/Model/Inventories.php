@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Inventories Class Doc Comment
  *
  * @category Class
  * @description availability info for hotel
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class Inventories implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'property_id' => '\Hapi\Model\PropertyId',
-'inventory' => '\Hapi\Model\Inventory[]'    ];
+        'property_id' => '\HapiPush\Model\PropertyId',
+'inventory' => '\HapiPush\Model\Inventory[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -207,7 +207,7 @@ class Inventories implements ModelInterface, ArrayAccess
     /**
      * Gets property_id
      *
-     * @return \Hapi\Model\PropertyId
+     * @return \HapiPush\Model\PropertyId
      */
     public function getPropertyId()
     {
@@ -217,7 +217,7 @@ class Inventories implements ModelInterface, ArrayAccess
     /**
      * Sets property_id
      *
-     * @param \Hapi\Model\PropertyId $property_id property_id
+     * @param \HapiPush\Model\PropertyId $property_id property_id
      *
      * @return $this
      */
@@ -231,7 +231,7 @@ class Inventories implements ModelInterface, ArrayAccess
     /**
      * Gets inventory
      *
-     * @return \Hapi\Model\Inventory[]
+     * @return \HapiPush\Model\Inventory[]
      */
     public function getInventory()
     {
@@ -241,7 +241,7 @@ class Inventories implements ModelInterface, ArrayAccess
     /**
      * Sets inventory
      *
-     * @param \Hapi\Model\Inventory[] $inventory inventory
+     * @param \HapiPush\Model\Inventory[] $inventory inventory
      *
      * @return $this
      */

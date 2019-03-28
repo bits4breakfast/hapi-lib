@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**property_id** | [**\Hapi\Model\PropertyId**](PropertyId.md) |  | [optional] 
-**dates** | [**\Hapi\Model\TimeSpan**](TimeSpan.md) |  | [optional] 
+**property_id** | [**\HapiPush\Model\PropertyId**](PropertyId.md) |  | [optional] 
+**dates** | [**\HapiPush\Model\TimeSpan**](TimeSpan.md) |  | [optional] 
 **code** | **string** | current restriction code | [optional] 
 **rate_criteria** | **string** | rate restriction type | [optional] 
 **room_criteria** | **string** | room restriction type | [optional] 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Inventory Class Doc Comment
  *
  * @category Class
  * @description availability by type
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class Inventory implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'inventory_info' => '\Hapi\Model\InventoryInfo',
-'inventory_counts' => '\Hapi\Model\InventoryCount[]'    ];
+        'inventory_info' => '\HapiPush\Model\InventoryInfo',
+'inventory_counts' => '\HapiPush\Model\InventoryCount[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -207,7 +207,7 @@ class Inventory implements ModelInterface, ArrayAccess
     /**
      * Gets inventory_info
      *
-     * @return \Hapi\Model\InventoryInfo
+     * @return \HapiPush\Model\InventoryInfo
      */
     public function getInventoryInfo()
     {
@@ -217,7 +217,7 @@ class Inventory implements ModelInterface, ArrayAccess
     /**
      * Sets inventory_info
      *
-     * @param \Hapi\Model\InventoryInfo $inventory_info inventory_info
+     * @param \HapiPush\Model\InventoryInfo $inventory_info inventory_info
      *
      * @return $this
      */
@@ -231,7 +231,7 @@ class Inventory implements ModelInterface, ArrayAccess
     /**
      * Gets inventory_counts
      *
-     * @return \Hapi\Model\InventoryCount[]
+     * @return \HapiPush\Model\InventoryCount[]
      */
     public function getInventoryCounts()
     {
@@ -241,7 +241,7 @@ class Inventory implements ModelInterface, ArrayAccess
     /**
      * Sets inventory_counts
      *
-     * @param \Hapi\Model\InventoryCount[] $inventory_counts count by type
+     * @param \HapiPush\Model\InventoryCount[] $inventory_counts count by type
      *
      * @return $this
      */

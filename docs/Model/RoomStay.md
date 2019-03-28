@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **room_count** | **int** | number of rooms associated to stay | [optional] 
 **payment_method** | **string** | payment method used in the reservation | [optional] 
 **comp_yn** | **string** | is reservation complimentary | [optional] 
-**rates** | [**\Hapi\Model\RoomRate[]**](RoomRate.md) |  | [optional] 
-**revenue** | [**\Hapi\Model\Revenue[]**](Revenue.md) |  | [optional] 
-**services** | [**\Hapi\Model\Service[]**](Service.md) |  | [optional] 
+**rates** | [**\HapiPush\Model\RoomRate[]**](RoomRate.md) |  | [optional] 
+**revenue** | [**\HapiPush\Model\Revenue[]**](Revenue.md) |  | [optional] 
+**services** | [**\HapiPush\Model\Service[]**](Service.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

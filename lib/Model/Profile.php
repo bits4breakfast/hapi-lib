@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Profile Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,17 +56,17 @@ class Profile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'property_id' => '\Hapi\Model\PropertyId',
+        'property_id' => '\HapiPush\Model\PropertyId',
 'id' => 'string',
 'type' => 'string',
-'name' => '\Hapi\Model\Name',
+'name' => '\HapiPush\Model\Name',
 'company' => 'string',
 'date_of_birth' => 'string',
-'emails' => '\Hapi\Model\Email[]',
-'phones' => '\Hapi\Model\Phone[]',
-'addresses' => '\Hapi\Model\Address[]',
-'id_documents' => '\Hapi\Model\IdDocument[]',
-'loyalty_programs' => '\Hapi\Model\LoyaltyProgram[]',
+'emails' => '\HapiPush\Model\Email[]',
+'phones' => '\HapiPush\Model\Phone[]',
+'addresses' => '\HapiPush\Model\Address[]',
+'id_documents' => '\HapiPush\Model\IdDocument[]',
+'loyalty_programs' => '\HapiPush\Model\LoyaltyProgram[]',
 'creator' => 'string',
 'created_date' => 'string',
 'travel_agent_id' => 'string'    ];
@@ -278,7 +278,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Gets property_id
      *
-     * @return \Hapi\Model\PropertyId
+     * @return \HapiPush\Model\PropertyId
      */
     public function getPropertyId()
     {
@@ -288,7 +288,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Sets property_id
      *
-     * @param \Hapi\Model\PropertyId $property_id property_id
+     * @param \HapiPush\Model\PropertyId $property_id property_id
      *
      * @return $this
      */
@@ -350,7 +350,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \Hapi\Model\Name
+     * @return \HapiPush\Model\Name
      */
     public function getName()
     {
@@ -360,7 +360,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \Hapi\Model\Name $name name
+     * @param \HapiPush\Model\Name $name name
      *
      * @return $this
      */
@@ -422,7 +422,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Gets emails
      *
-     * @return \Hapi\Model\Email[]
+     * @return \HapiPush\Model\Email[]
      */
     public function getEmails()
     {
@@ -432,7 +432,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Sets emails
      *
-     * @param \Hapi\Model\Email[] $emails emails
+     * @param \HapiPush\Model\Email[] $emails emails
      *
      * @return $this
      */
@@ -446,7 +446,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Gets phones
      *
-     * @return \Hapi\Model\Phone[]
+     * @return \HapiPush\Model\Phone[]
      */
     public function getPhones()
     {
@@ -456,7 +456,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Sets phones
      *
-     * @param \Hapi\Model\Phone[] $phones phones
+     * @param \HapiPush\Model\Phone[] $phones phones
      *
      * @return $this
      */
@@ -470,7 +470,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \Hapi\Model\Address[]
+     * @return \HapiPush\Model\Address[]
      */
     public function getAddresses()
     {
@@ -480,7 +480,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \Hapi\Model\Address[] $addresses addresses
+     * @param \HapiPush\Model\Address[] $addresses addresses
      *
      * @return $this
      */
@@ -494,7 +494,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Gets id_documents
      *
-     * @return \Hapi\Model\IdDocument[]
+     * @return \HapiPush\Model\IdDocument[]
      */
     public function getIdDocuments()
     {
@@ -504,7 +504,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Sets id_documents
      *
-     * @param \Hapi\Model\IdDocument[] $id_documents id_documents
+     * @param \HapiPush\Model\IdDocument[] $id_documents id_documents
      *
      * @return $this
      */
@@ -518,7 +518,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Gets loyalty_programs
      *
-     * @return \Hapi\Model\LoyaltyProgram[]
+     * @return \HapiPush\Model\LoyaltyProgram[]
      */
     public function getLoyaltyPrograms()
     {
@@ -528,7 +528,7 @@ class Profile implements ModelInterface, ArrayAccess
     /**
      * Sets loyalty_programs
      *
-     * @param \Hapi\Model\LoyaltyProgram[] $loyalty_programs loyalty_programs
+     * @param \HapiPush\Model\LoyaltyProgram[] $loyalty_programs loyalty_programs
      *
      * @return $this
      */

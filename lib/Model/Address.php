@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Address Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,9 +62,9 @@ class Address implements ModelInterface, ArrayAccess
 'address2' => 'string',
 'address3' => 'string',
 'city' => 'string',
-'state_province' => '\Hapi\Model\StateProvince',
+'state_province' => '\HapiPush\Model\StateProvince',
 'postal_code' => 'string',
-'country' => '\Hapi\Model\Country'    ];
+'country' => '\HapiPush\Model\Country'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -392,7 +392,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets state_province
      *
-     * @return \Hapi\Model\StateProvince
+     * @return \HapiPush\Model\StateProvince
      */
     public function getStateProvince()
     {
@@ -402,7 +402,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets state_province
      *
-     * @param \Hapi\Model\StateProvince $state_province state_province
+     * @param \HapiPush\Model\StateProvince $state_province state_province
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return \Hapi\Model\Country
+     * @return \HapiPush\Model\Country
      */
     public function getCountry()
     {
@@ -450,7 +450,7 @@ class Address implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param \Hapi\Model\Country $country country
+     * @param \HapiPush\Model\Country $country country
      *
      * @return $this
      */

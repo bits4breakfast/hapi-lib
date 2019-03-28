@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * RoomRate Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class RoomRate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'effective_dates' => '\Hapi\Model\TimeSpan',
+        'effective_dates' => '\HapiPush\Model\TimeSpan',
 'rate_code' => 'string',
 'currency_code' => 'string',
 'amount' => 'float'    ];
@@ -218,7 +218,7 @@ class RoomRate implements ModelInterface, ArrayAccess
     /**
      * Gets effective_dates
      *
-     * @return \Hapi\Model\TimeSpan
+     * @return \HapiPush\Model\TimeSpan
      */
     public function getEffectiveDates()
     {
@@ -228,7 +228,7 @@ class RoomRate implements ModelInterface, ArrayAccess
     /**
      * Sets effective_dates
      *
-     * @param \Hapi\Model\TimeSpan $effective_dates effective_dates
+     * @param \HapiPush\Model\TimeSpan $effective_dates effective_dates
      *
      * @return $this
      */

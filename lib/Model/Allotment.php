@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Allotment Class Doc Comment
  *
  * @category Class
  * @description group block of inventory
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,11 +57,11 @@ class Allotment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'property_id' => '\Hapi\Model\PropertyId',
+        'property_id' => '\HapiPush\Model\PropertyId',
 'id' => 'string',
 'status' => 'string',
 'block_name' => 'string',
-'dates' => '\Hapi\Model\TimeSpan',
+'dates' => '\HapiPush\Model\TimeSpan',
 'market_code' => 'string',
 'source_code' => 'string',
 'channel_code' => 'string',
@@ -69,9 +69,9 @@ class Allotment implements ModelInterface, ArrayAccess
 'billing_type' => 'string',
 'includes_food_and_bev' => 'bool',
 'block_type' => 'string',
-'comments' => '\Hapi\Model\Comment[]',
-'profiles' => '\Hapi\Model\Profile[]',
-'inventory_blocks' => '\Hapi\Model\InventoryBlock[]'    ];
+'comments' => '\HapiPush\Model\Comment[]',
+'profiles' => '\HapiPush\Model\Profile[]',
+'inventory_blocks' => '\HapiPush\Model\InventoryBlock[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -285,7 +285,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Gets property_id
      *
-     * @return \Hapi\Model\PropertyId
+     * @return \HapiPush\Model\PropertyId
      */
     public function getPropertyId()
     {
@@ -295,7 +295,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Sets property_id
      *
-     * @param \Hapi\Model\PropertyId $property_id property_id
+     * @param \HapiPush\Model\PropertyId $property_id property_id
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Gets dates
      *
-     * @return \Hapi\Model\TimeSpan
+     * @return \HapiPush\Model\TimeSpan
      */
     public function getDates()
     {
@@ -391,7 +391,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Sets dates
      *
-     * @param \Hapi\Model\TimeSpan $dates dates
+     * @param \HapiPush\Model\TimeSpan $dates dates
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Gets comments
      *
-     * @return \Hapi\Model\Comment[]
+     * @return \HapiPush\Model\Comment[]
      */
     public function getComments()
     {
@@ -583,7 +583,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Sets comments
      *
-     * @param \Hapi\Model\Comment[] $comments free text comments associated to block
+     * @param \HapiPush\Model\Comment[] $comments free text comments associated to block
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Gets profiles
      *
-     * @return \Hapi\Model\Profile[]
+     * @return \HapiPush\Model\Profile[]
      */
     public function getProfiles()
     {
@@ -607,7 +607,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Sets profiles
      *
-     * @param \Hapi\Model\Profile[] $profiles profiles
+     * @param \HapiPush\Model\Profile[] $profiles profiles
      *
      * @return $this
      */
@@ -621,7 +621,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Gets inventory_blocks
      *
-     * @return \Hapi\Model\InventoryBlock[]
+     * @return \HapiPush\Model\InventoryBlock[]
      */
     public function getInventoryBlocks()
     {
@@ -631,7 +631,7 @@ class Allotment implements ModelInterface, ArrayAccess
     /**
      * Sets inventory_blocks
      *
-     * @param \Hapi\Model\InventoryBlock[] $inventory_blocks inventory_blocks
+     * @param \HapiPush\Model\InventoryBlock[] $inventory_blocks inventory_blocks
      *
      * @return $this
      */

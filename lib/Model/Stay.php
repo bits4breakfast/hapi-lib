@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Stay Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class Stay implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'property_id' => '\Hapi\Model\PropertyId',
+        'property_id' => '\HapiPush\Model\PropertyId',
 'reservation_id' => 'string',
-'room_stay' => '\Hapi\Model\RoomStay'    ];
+'room_stay' => '\HapiPush\Model\RoomStay'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -212,7 +212,7 @@ class Stay implements ModelInterface, ArrayAccess
     /**
      * Gets property_id
      *
-     * @return \Hapi\Model\PropertyId
+     * @return \HapiPush\Model\PropertyId
      */
     public function getPropertyId()
     {
@@ -222,7 +222,7 @@ class Stay implements ModelInterface, ArrayAccess
     /**
      * Sets property_id
      *
-     * @param \Hapi\Model\PropertyId $property_id property_id
+     * @param \HapiPush\Model\PropertyId $property_id property_id
      *
      * @return $this
      */
@@ -260,7 +260,7 @@ class Stay implements ModelInterface, ArrayAccess
     /**
      * Gets room_stay
      *
-     * @return \Hapi\Model\RoomStay
+     * @return \HapiPush\Model\RoomStay
      */
     public function getRoomStay()
     {
@@ -270,7 +270,7 @@ class Stay implements ModelInterface, ArrayAccess
     /**
      * Sets room_stay
      *
-     * @param \Hapi\Model\RoomStay $room_stay room_stay
+     * @param \HapiPush\Model\RoomStay $room_stay room_stay
      *
      * @return $this
      */

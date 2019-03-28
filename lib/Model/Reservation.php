@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * Reservation Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class Reservation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'property_id' => '\Hapi\Model\PropertyId',
+        'property_id' => '\HapiPush\Model\PropertyId',
 'id' => 'string',
 'booking_confirmation_id' => 'string',
 'arrival_date' => 'string',
@@ -69,10 +69,10 @@ class Reservation implements ModelInterface, ArrayAccess
 'adults' => 'int',
 'children' => 'int',
 'status' => 'string',
-'guests' => '\Hapi\Model\Guest[]',
-'profiles' => '\Hapi\Model\Profile[]',
-'room_stays' => '\Hapi\Model\RoomStay[]',
-'comments' => '\Hapi\Model\Comment[]'    ];
+'guests' => '\HapiPush\Model\Guest[]',
+'profiles' => '\HapiPush\Model\Profile[]',
+'room_stays' => '\HapiPush\Model\RoomStay[]',
+'comments' => '\HapiPush\Model\Comment[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -296,7 +296,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Gets property_id
      *
-     * @return \Hapi\Model\PropertyId
+     * @return \HapiPush\Model\PropertyId
      */
     public function getPropertyId()
     {
@@ -306,7 +306,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Sets property_id
      *
-     * @param \Hapi\Model\PropertyId $property_id property_id
+     * @param \HapiPush\Model\PropertyId $property_id property_id
      *
      * @return $this
      */
@@ -608,7 +608,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Gets guests
      *
-     * @return \Hapi\Model\Guest[]
+     * @return \HapiPush\Model\Guest[]
      */
     public function getGuests()
     {
@@ -618,7 +618,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Sets guests
      *
-     * @param \Hapi\Model\Guest[] $guests guest profiles associated to reservation
+     * @param \HapiPush\Model\Guest[] $guests guest profiles associated to reservation
      *
      * @return $this
      */
@@ -632,7 +632,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Gets profiles
      *
-     * @return \Hapi\Model\Profile[]
+     * @return \HapiPush\Model\Profile[]
      */
     public function getProfiles()
     {
@@ -642,7 +642,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Sets profiles
      *
-     * @param \Hapi\Model\Profile[] $profiles non-guest profiles associated to reservation
+     * @param \HapiPush\Model\Profile[] $profiles non-guest profiles associated to reservation
      *
      * @return $this
      */
@@ -656,7 +656,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Gets room_stays
      *
-     * @return \Hapi\Model\RoomStay[]
+     * @return \HapiPush\Model\RoomStay[]
      */
     public function getRoomStays()
     {
@@ -666,7 +666,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Sets room_stays
      *
-     * @param \Hapi\Model\RoomStay[] $room_stays room stay information associated to reservation
+     * @param \HapiPush\Model\RoomStay[] $room_stays room stay information associated to reservation
      *
      * @return $this
      */
@@ -680,7 +680,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Gets comments
      *
-     * @return \Hapi\Model\Comment[]
+     * @return \HapiPush\Model\Comment[]
      */
     public function getComments()
     {
@@ -690,7 +690,7 @@ class Reservation implements ModelInterface, ArrayAccess
     /**
      * Sets comments
      *
-     * @param \Hapi\Model\Comment[] $comments comments
+     * @param \HapiPush\Model\Comment[] $comments comments
      *
      * @return $this
      */

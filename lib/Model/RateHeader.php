@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Hapi\Model;
+namespace HapiPush\Model;
 
 use \ArrayAccess;
-use \Hapi\ObjectSerializer;
+use \HapiPush\ObjectSerializer;
 
 /**
  * RateHeader Class Doc Comment
  *
  * @category Class
- * @package  Hapi
+ * @package  HapiPush
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,15 +56,15 @@ class RateHeader implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'property_id' => '\Hapi\Model\PropertyId',
+        'property_id' => '\HapiPush\Model\PropertyId',
 'id' => 'string',
-'sell_dates' => '\Hapi\Model\TimeSpan',
+'sell_dates' => '\HapiPush\Model\TimeSpan',
 'category' => 'string',
 'market_code' => 'string',
 'source_code' => 'string',
 'status' => 'string',
 'yield_status' => 'string',
-'details' => '\Hapi\Model\RateDetail[]'    ];
+'details' => '\HapiPush\Model\RateDetail[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -248,7 +248,7 @@ class RateHeader implements ModelInterface, ArrayAccess
     /**
      * Gets property_id
      *
-     * @return \Hapi\Model\PropertyId
+     * @return \HapiPush\Model\PropertyId
      */
     public function getPropertyId()
     {
@@ -258,7 +258,7 @@ class RateHeader implements ModelInterface, ArrayAccess
     /**
      * Sets property_id
      *
-     * @param \Hapi\Model\PropertyId $property_id property_id
+     * @param \HapiPush\Model\PropertyId $property_id property_id
      *
      * @return $this
      */
@@ -296,7 +296,7 @@ class RateHeader implements ModelInterface, ArrayAccess
     /**
      * Gets sell_dates
      *
-     * @return \Hapi\Model\TimeSpan
+     * @return \HapiPush\Model\TimeSpan
      */
     public function getSellDates()
     {
@@ -306,7 +306,7 @@ class RateHeader implements ModelInterface, ArrayAccess
     /**
      * Sets sell_dates
      *
-     * @param \Hapi\Model\TimeSpan $sell_dates sell_dates
+     * @param \HapiPush\Model\TimeSpan $sell_dates sell_dates
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ class RateHeader implements ModelInterface, ArrayAccess
     /**
      * Gets details
      *
-     * @return \Hapi\Model\RateDetail[]
+     * @return \HapiPush\Model\RateDetail[]
      */
     public function getDetails()
     {
@@ -450,7 +450,7 @@ class RateHeader implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param \Hapi\Model\RateDetail[] $details details
+     * @param \HapiPush\Model\RateDetail[] $details details
      *
      * @return $this
      */

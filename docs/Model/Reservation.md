@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**property_id** | [**\Hapi\Model\PropertyId**](PropertyId.md) |  | [optional] 
+**property_id** | [**\HapiPush\Model\PropertyId**](PropertyId.md) |  | [optional] 
 **id** | **string** | reservation identifier and object key | [optional] 
 **booking_confirmation_id** | **string** | unique confirmation id within given hotel | [optional] 
 **arrival_date** | **string** | check-in date, in YYYY-MM-DD format | [optional] 
@@ -16,10 +16,10 @@ Name | Type | Description | Notes
 **adults** | **int** |  | [optional] 
 **children** | **int** |  | [optional] 
 **status** | **string** | current status of reservation | [optional] 
-**guests** | [**\Hapi\Model\Guest[]**](Guest.md) | guest profiles associated to reservation | [optional] 
-**profiles** | [**\Hapi\Model\Profile[]**](Profile.md) | non-guest profiles associated to reservation | [optional] 
-**room_stays** | [**\Hapi\Model\RoomStay[]**](RoomStay.md) | room stay information associated to reservation | [optional] 
-**comments** | [**\Hapi\Model\Comment[]**](Comment.md) |  | [optional] 
+**guests** | [**\HapiPush\Model\Guest[]**](Guest.md) | guest profiles associated to reservation | [optional] 
+**profiles** | [**\HapiPush\Model\Profile[]**](Profile.md) | non-guest profiles associated to reservation | [optional] 
+**room_stays** | [**\HapiPush\Model\RoomStay[]**](RoomStay.md) | room stay information associated to reservation | [optional] 
+**comments** | [**\HapiPush\Model\Comment[]**](Comment.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
