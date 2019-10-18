@@ -1,6 +1,7 @@
-# Address
+# # Address
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** | address type | [optional] 
@@ -13,5 +14,6 @@ Name | Type | Description | Notes
 **postal_code** | **string** | postal or zip code associated to address | [optional] 
 **country** | [**\HapiPush\Model\Country**](Country.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
 

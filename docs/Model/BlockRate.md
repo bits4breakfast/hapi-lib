@@ -1,6 +1,7 @@
-# BlockRate
+# # BlockRate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guests** | **int** | number of guests | [optional] 
@@ -8,5 +9,6 @@ Name | Type | Description | Notes
 **amount** | **float** | rate amount | [optional] 
 **includes_tax** | **bool** | is indicated rate inclusive of tax | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
 

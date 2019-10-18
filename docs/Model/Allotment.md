@@ -1,6 +1,7 @@
-# Allotment
+# # Allotment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **property_id** | [**\HapiPush\Model\PropertyId**](PropertyId.md) |  | [optional] 
@@ -19,5 +20,6 @@ Name | Type | Description | Notes
 **profiles** | [**\HapiPush\Model\Profile[]**](Profile.md) |  | [optional] 
 **inventory_blocks** | [**\HapiPush\Model\InventoryBlock[]**](InventoryBlock.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
 
