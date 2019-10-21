@@ -1,5 +1,5 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
+    "name": "bits4breakfast/hapi-push",
     "description": "- sample API definition for a vendor webservice that receives data from a Hapi Streaming Flow - definition provided as an example only",
     "keywords": [
         "openapitools",
