@@ -168,6 +168,7 @@ class Phone implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const TYPE_VOICE = 'VOICE';
     const TYPE_HOME = 'HOME';
     const TYPE_BUSINESS = 'BUSINESS';
     const TYPE_MOBILE = 'MOBILE';
@@ -184,6 +185,7 @@ class Phone implements ModelInterface, ArrayAccess
     public function getTypeAllowableValues()
     {
         return [
+            self::TYPE_VOICE,
             self::TYPE_HOME,
             self::TYPE_BUSINESS,
             self::TYPE_MOBILE,
